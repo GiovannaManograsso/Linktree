@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("fondos..png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6); /* Transparencia */
+    backdrop-filter: blur(8px); /* Glass effect */
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #4A342E; /* Marrón elegante */
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.social img {
+    width: 35px;
+    margin: 0 6px;
+    transition: 0.3s ease;
+}
+
+.social img:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+.links a {
+    display: block;
+    text-decoration: none;
+    background-color: #4A342E;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #C79B63;
+    transform: translateY(-2px);
+}
+
