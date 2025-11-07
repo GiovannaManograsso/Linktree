@@ -1,0 +1,455 @@
+/*index*/
+/* FUENTES Y RESET */
+body.cool {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: linear-gradient(135deg, #d3aea1, #e0c097);
+  font-family: 'Montserrat', sans-serif;
+  color: #522d27;
+}
+
+/* NAV */
+.navegacion {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 2rem;
+  background: #4e342e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 17px;
+  font-family: 'Pacifico';
+}
+
+.navegacion .logo {
+  height: 45px;
+  margin-right: auto;
+  border-radius: 50%;
+  border: 2px solid #c9b5ad;
+}
+
+.navegacion li {
+  margin-left: 1rem;
+}
+
+.navegacion .boton {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: 0.3s;
+  background-color:#795548;
+}
+
+.navegacion .boton:hover {
+  background: #dfd1cd;
+  color: #fffde7;
+  transform: scale(1.05);
+}
+
+/* ENCABEZADO */
+.primer {
+  margin: 0;
+  padding: 25px;
+  font-size: 32px;
+  color:#dfd1cd;
+  background: #a0735f;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* BIENVENIDA */
+.bienv {
+  margin: 25px auto;
+  max-width: 600px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.bienv span {
+  color: #795548;
+  font-family: cursive;
+  font-size: 22px;
+}
+
+/* IMAGEN PRINCIPAL */
+.img1 {
+  width: 340px;
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.4s;
+}
+
+.img1:hover {
+  transform: scale(1.05);
+}
+
+/* FRASE */
+.poesia {
+  margin: 40px auto;
+  max-width: 550px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3e2723;
+  background: #efebe9;
+  padding: 20px;
+  border-left: 5px solid #8d6e63;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.poesia span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #6d4c41;
+}
+
+/* SEPARADOR */
+.separador {
+  border: none;
+  height: 2px;
+  width: 60%;
+  background: linear-gradient(to right, #a1887f, #4e342e, #a1887f);
+  margin: 40px auto;
+  border-radius: 50px;
+}
+
+/* ICONOS SOCIALES */
+.social {
+  margin: 30px 0;
+}
+.social a{
+  text-decoration: none;
+}
+.icono1 {
+  width: 45px;
+  margin: 10px;
+  transition: transform 0.4s, filter 0.4s;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.icono2 {
+  width: 50px;
+  margin: 10px;
+  transition: transform 0.4s, filter 0.4s;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.icono3 {
+  width: 47px;
+  margin: 10px;
+  transition: transform 0.4s, filter 0.4s;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.icono1:hover {
+  transform: scale(1.2) rotate(8deg);
+  filter: brightness(1.2);
+}
+.icono2:hover {
+  transform: scale(1.2) rotate(8deg);
+  filter: brightness(1.2);
+}
+.icono3:hover {
+  transform: scale(1.2) rotate(8deg);
+  filter: brightness(1.2);
+}
+
+/*sobre mi*/
+/* Encabezados */
+
+/* Contenedor central */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  background-color: #795548; 
+  margin: 0;
+  padding: 15px;
+  color: #ffffff;
+  border-radius: 10px 10px;
+  font-family: 'Playfair Display', serif; 
+}
+
+h3 {
+  margin: 20px;
+  color: #4a3f35;
+  font-family: cursive;
+}
+
+/* Secciones de información */
+.info {
+  background-color: #a0735f; 
+  width: 600px; 
+  padding: 15px; 
+  margin-bottom: 20px; 
+  border-radius: 12px; 
+  color: #ffffff;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+}
+
+.in1 {
+  text-align: justify; 
+  margin: 0;
+}
+
+/* Imágenes */
+.img-left, .img-right {
+  width: 180px; 
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.25);
+}
+
+.img-left {
+  float: left;
+  margin-right: 15px;
+}
+
+.img-right {
+  float: right;
+  margin-left: 15px;
+}
+
+.separar {
+  clear: both;
+}
+
+
+/*Tablas*/
+
+/* Título */
+#titulo {
+  text-align: center;
+  color: #f5f1ed; 
+  background-color: #795548;
+  margin: 20px auto 15px auto;
+  width: 400px;
+  font-size: 30px;
+}
+
+/* Tabla principal - encabezado */
+#tabla1 {
+  width: 500px;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: #5c3d2e; /* marrón oscuro */
+  border-radius: 8px 8px 0 0;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#tabla1 th {
+  padding: 10px;
+}
+
+#ranking, #puntosof {
+  text-align: center;
+  color: #f5f1ed; /* blanco cálido */
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Tabla de jugadores */
+.jugadores {
+  width: 500px;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: #a47551; /* marrón medio */
+  color: #f5f1ed;
+  border: 1px solid #d9c2a3; /* arena claro */
+  border-radius: 0 0 8px 8px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 40px;
+}
+
+/* Celdas */
+.jugadores td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #d9c2a3;
+}
+
+/* Hover en filas */
+.jugadores tr:hover {
+  background-color: #8b5e3c; /* marrón tostado más oscuro */
+  transition: 0.3s;
+}
+
+/* Imágenes dentro de la tabla */
+.jugadores img {
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.25);
+}
+
+/*recetas*/
+/* Contenedor de receta */
+.receta {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f5f0ec;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  animation: fadeIn 1s ease-in;
+}
+
+/* Títulos principales */
+.receta h1 {
+  background: linear-gradient(135deg, #795548, #a0735f);
+  color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Subtítulos */
+.receta h3 {
+  color: #6d4c41;
+  margin-top: 25px;
+  font-size: 20px;
+  border-bottom: 2px solid #d7b9a6;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Párrafos de datos (ej: tiempo, porciones) */
+.receta p {
+  font-size: 15px;
+  color: #5d4037;
+  margin: 8px 0 15px 0;
+  font-style: italic;
+}
+
+/* Listas de ingredientes */
+.receta ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.receta ul li {
+  background: #e0c1a3;
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #4a2f26;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.1);
+}
+
+
+/* Procedimiento - estilo timeline*/
+.receta ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0;
+  counter-reset: paso;
+}
+
+.receta ol li {
+  counter-increment: paso;
+  position: relative;
+  background: #f7ebe3;
+  margin: 18px 0;
+  padding: 15px 15px 15px 55px;
+  border-radius: 12px;
+  color: #3e2723;
+  font-weight: 500;
+  line-height: 1.6;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.15);
+}
+
+/*Numeración fija*/
+.receta ol li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #795548;
+  color: #fff;
+  font-weight: bold;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Imagen de receta */
+.receta img {
+  width: 100%;
+  max-width: 250px;
+  margin: 25px auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+
+.receta img:hover {
+  transform: scale(1.05);
+}
+
+/* Separador entre recetas */
+.separador-receta {
+  border: none;
+  height: 3px;
+  width: 70%;
+  background: linear-gradient(to right, #a1887f, #6d4c41, #a1887f);
+  margin: 50px auto;
+  border-radius: 50px;
+}
+
+/*Footer*/
+footer {
+  background-color:#4e342e;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  color: #f5f5f5;
+  font-family: 'Pacifico';
+  font-size: 17px;
+}
+
+footer .nombre{
+  color:  #f5f5f5;
+}
+
+footer .columna {
+  flex: 1;
+}
+
+footer ul {
+  list-style: none; 
+  padding: 0;       /* Quita el padding por defecto */
+  margin: 0; 
+}
+
+footer .boton {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  background-color:#795548;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+footer .boton:hover {
+  background: #dfd1cd;
+  color: #4e342e;
+}
