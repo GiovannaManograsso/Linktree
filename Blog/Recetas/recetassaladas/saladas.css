@@ -1,0 +1,504 @@
+/* === RESETEO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f2f3f5;
+  color: #1f1f1f;
+  line-height: 1.6;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background: linear-gradient(90deg, #111827, #1f2937);
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+  padding-right: 30px;
+}
+
+.menu .logo {
+  margin-right: auto;
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+  color: #e2e8f0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  border-radius: 50%;
+  margin-left: 15px;
+  border: 2px solid #7c63ec;
+  transition: transform 0.4s ease;
+}
+
+.logo img:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.menu a {
+  text-decoration: none;
+  color: #f1f5f9;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.menu a:hover{
+  color: #7c63ec;
+  transform: translateY(-2px);
+}
+
+
+/* === TÍTULO PRINCIPAL === */
+.titulo-principal {
+  text-align: center;
+  margin: 60px auto 40px;
+  color: #1f2937;
+}
+
+.titulo-principal h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.titulo-principal .subtitulo {
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 400;
+}
+
+/* === POSTS === */
+.main-content {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 60px;
+  max-width: 1200px;
+}
+
+.feed {
+  width: 100%;
+}
+
+.post-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.post {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  flex: 1 1 45%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: auto;
+}
+
+.post:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(107, 76, 191, 0.15);
+}
+
+.post img {
+  width: 45%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* === CONTENIDO DEL POST === */
+.post-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-content h2 {
+  color: #1f2937;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+}
+
+.post-content .meta {
+  font-size: 0.9rem;
+  color: #6b5a88;
+  margin-bottom: 10px;
+}
+
+.post-content .meta a {
+  color: #5d3191;
+  text-decoration: none;
+}
+
+.post-content .meta a:hover {
+  text-decoration: underline;
+}
+
+.post-content p {
+  color: #3f3f46;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* === BOTÓN === */
+.btn {
+  align-self: flex-start;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #7c63ec, #9b84f3);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  margin-left: 70px;
+  box-shadow: 0 4px 10px rgba(111, 94, 142, 0.25);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #5a4b76, #7a68a0);
+  box-shadow: 0 6px 16px rgba(111, 94, 142, 0.35);
+}
+/* === BOTÓN ENVIAR RECETA (ABAJO Y CENTRADO) === */
+.enviar-receta {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 0;
+  margin-bottom: 40px;
+}
+
+/* === BOTÓN ENVIAR RECETA === */
+.enviar-receta .btn {
+  margin-left: 0;
+  padding: 14px 50px;
+  min-width: 450px;
+  font-size: 1.05rem;
+  border-radius: 30px;
+  text-align: center;
+  background:  linear-gradient(90deg, #6f5e8e, #8a79a8);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(111, 94, 142, 0.25);
+}
+
+.enviar-receta .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(90deg, #5a4b76, #7c6aa0, #5a4b76);
+  box-shadow: 0 8px 20px rgba(111, 94, 142, 0.35);
+}
+
+/*Dulces */
+/* === CONTENEDOR PRINCIPAL (PÁGINA DE RECETA) === */
+.receta-container {
+  max-width: 850px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* === ENCABEZADO === */
+.encabezado-receta {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.encabezado-receta h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  color: #3b2d5e;
+  margin-bottom: 10px;
+}
+
+.meta {
+  font-size: 0.95rem;
+  color: #6b5a88;
+}
+
+.encabezado-receta img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-top: 25px;
+}
+
+/* === INTRO === */
+.intro p {
+  font-size: 1.05rem;
+  color: #3a3a3a;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+/* === INGREDIENTES CON PERSONALIDAD === */
+.ingredientes-lista {
+  list-style: none;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.ingredientes-lista li {
+  background: #f6f3ff;
+  border-left: 5px solid #8574b3;
+  margin: 8px 0px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 1.03rem;
+  position: relative;
+}
+
+.ingredientes-lista li:hover {
+  background: #ede8f8;
+}
+
+/* Checkbox simple y redondo */
+.ingredientes-lista li label {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre el círculo y el texto */
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+.ingredientes-lista li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+/* === PASOS NUMERADOS CON TOQUE SUTIL === */
+.preparacion-pasos {
+  counter-reset: paso;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.preparacion-pasos li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  counter-increment: paso;
+  position: relative;
+  padding-left: 35px;
+}
+
+.preparacion-pasos li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #8a79a8;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === TIPS MÁS COMPACTO Y ELEGANTE === */
+.tips {
+  background: #f5f2fc;
+  border-left: 4px solid #8a79a8;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 0.93rem;
+  color: #3a3a3a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tips h2 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #4a3c70;
+  font-weight: 600;
+}
+/* === FOOTER === */
+footer {
+  background: linear-gradient(90deg, #111827, #1f2937);
+  color: #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid #3f3f3f;
+}
+
+/* === COLUMNAS === */
+.columna {
+  flex: 1 1 250px;
+  margin: 15px;
+  text-align: center;
+}
+
+.columna h3.nombre {
+  font-family: 'Poppins', sans-serif;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* === LISTAS === */
+.columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columna ul li {
+  margin: 10px 0;
+}
+
+/* === ENLACES DEL MAPA DEL SITIO === */
+.columna a.boton {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.columna a.boton:hover {
+  color: #a78bfa;
+  text-shadow: 0 0 6px rgba(167, 139, 250, 0.4);
+}
+
+/* === ICONOS DE REDES === */
+.columna img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.columna img:hover {
+  transform: scale(1.1);
+  border-color: #a78bfa;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
+}
+
+/* === ESPACIADO ENTRE ICONOS === */
+.columna ul li a {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  /* === NAVBAR === */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+  /* Hace que los posts se apilen verticalmente en celular */
+  .post-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post {
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    text-align: center;
+  }
+
+  .post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .post-content {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .post-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .post-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    align-self: center;
+    margin: 10px auto 0;
+  }
+
+
+  /* === BOTÓN FINAL === */
+  .enviar-receta {
+    margin: 40px auto 30px;
+    padding: 0 20px;
+  }
+
+  .enviar-receta .btn {
+    width: 100%;
+    max-width: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  /* === IMÁGENES GENERALES === */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* === FOOTER === */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .columna {
+    margin-bottom: 20px;
+  }
+}

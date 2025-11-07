@@ -1,0 +1,314 @@
+/* === RESETEO Y FUENTE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === FONDO CON IMAGEN === */
+body {
+  background-image: url("fondo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #1f1f1f;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background: rgb(17, 24, 39); /* oscuro con transparencia */
+  backdrop-filter: blur(6px);
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+  padding-right: 30px;
+}
+
+.menu .logo {
+  margin-right: auto;
+  font-size: 24px;
+  color: #e2e8f0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  margin-left: 15px;
+  border: 2px solid #463e74;
+  transition: transform 0.4s ease;
+}
+
+.logo img:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.menu a {
+  text-decoration: none;
+  color: #f1f5f9;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.menu a:hover {
+  color: #b39ddb;
+  transform: translateY(-2px);
+}
+
+/* === SECCIÓN DEL FORMULARIO === */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  min-height: calc(100vh - 100px);
+}
+
+/* === CONTENEDOR TRANSPARENTE === */
+.container {
+  background: rgba(255, 255, 255, 0.85); /* blanco translúcido elegante */
+  backdrop-filter: blur(10px);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid rgba(229, 231, 235, 0.3);
+}
+
+/* === TÍTULO === */
+.container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2d2d2d;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 45px;
+}
+.intro-text {
+  text-align: center;
+  color: #4b4b4b;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+
+
+/* === FORMULARIO === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111827;
+  transition: all 0.3s ease;
+}
+
+/* === EFECTO AL ENFOCAR === */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #7c63ec;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(124, 99, 236, 0.3);
+}
+
+/* === TEXTAREA === */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* === BOTÓN === */
+button {
+  background: linear-gradient(90deg, #5d3191, #7c63ec);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(93, 49, 145, 0.3);
+}
+/* === FOOTER === */
+footer {
+  background: linear-gradient(90deg, #111827, #1f2937);
+  color: #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid #3f3f3f;
+}
+
+/* === COLUMNAS === */
+.columna {
+  flex: 1 1 250px;
+  margin: 15px;
+  text-align: center;
+}
+
+.columna h3.nombre {
+  font-family: 'Poppins', sans-serif;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* === LISTAS === */
+.columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columna ul li {
+  margin: 10px 0;
+}
+
+/* === ENLACES DEL MAPA DEL SITIO === */
+.columna a.boton {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.columna a.boton:hover {
+  color: #a78bfa;
+  text-shadow: 0 0 6px rgba(167, 139, 250, 0.4);
+}
+
+/* === ICONOS DE REDES === */
+.columna img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.columna img:hover {
+  transform: scale(1.1);
+  border-color: #a78bfa;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
+}
+
+/* === ESPACIADO ENTRE ICONOS === */
+.columna ul li a {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  /* === NAVBAR === */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* === FORMULARIO === */
+  .form-section {
+    padding: 60px 15px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  label, input, textarea, button {
+    font-size: 0.95rem;
+  }
+
+  /* === IMÁGENES === */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Si tenés una imagen de fondo en el form o sección */
+  .form-section {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* === FOOTER === */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .columna {
+    margin-bottom: 20px;
+  }
+}
+
+
+
