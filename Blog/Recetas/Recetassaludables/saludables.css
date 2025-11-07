@@ -417,6 +417,15 @@ footer {
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .post-row {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   /* === NAVBAR === */
   .menu {
     flex-direction: column;
@@ -497,3 +506,4 @@ footer {
     margin-bottom: 20px;
   }
 }
+
