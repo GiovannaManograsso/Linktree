@@ -1,0 +1,403 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* NAV */
+nav {
+    width: 100%;
+    background: linear-gradient(90deg, #1C3347, #315C80);
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* CONTENEDOR */
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* UL */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* LOGO */
+.nav-links .logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    border-radius: 50%;
+    border: 2px solid #7a9bc080;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.08) rotate(3deg);
+}
+
+/* ENLACES */
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a:hover {
+    color: #B9D9F4;
+    transform: translateY(-2px);
+}
+
+/* =================== CONTENEDOR PRINCIPAL =================== */
+.trivia-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* =================== TITULOS =================== */
+.titulo {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #1C3347;
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #315C80;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* =================== CATEGORÍAS =================== */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-categoria {
+    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    width: 260px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-categoria:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.card-categoria h3 {
+    font-size: 22px;
+    color: #1C3347;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.progress-container {
+    width: 100%;
+    height: 16px;
+    background: #dce3eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #315C80;
+    border-radius: 12px;
+    transition: width 0.7s ease;
+}
+
+/* =================== BOTONES =================== */
+.boton-jugar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #315C80;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.boton-jugar:hover {
+    background: #1C3347;
+}
+
+/* =================== MODAL =================== */
+
+.modal-contenido h3 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #1C3347;
+}
+
+.modal-contenido a {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar:hover {
+    color: #1C3347;
+}
+
+/* =================== FORMULARIO DE PREGUNTAS =================== */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 1px solid #c5d0dc;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #315C80;
+    box-shadow: 0 0 8px rgba(49,92,128,0.3);
+    outline: none;
+}
+
+
+/* =========================== FOOTER ======================= */
+footer {
+  background: linear-gradient(90deg, #1C3347, #2A475F); /* Tonos de tu azul */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* === COLUMNAS === */
+.columna {
+  flex: 1 1 250px;
+  margin: 15px;
+  text-align: center;
+}
+
+.columna h3.nombre {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* === LISTAS === */
+.columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columna ul li {
+  margin: 10px 0;
+}
+
+/* === ENLACES DEL MAPA DEL SITIO === */
+.columna a.boton {
+  text-decoration: none;
+  color: #B9D9F4; /* azul claro de tu paleta */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.columna a.boton:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* === ICONOS DE REDES === */
+.columna img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.columna img:hover {
+  transform: scale(1.1);
+  border-color: #B9D9F4;
+  box-shadow: 0 0 10px rgba(185, 217, 244, 0.3);
+}
+
+/* === ESPACIADO ENTRE ICONOS === */
+.columna ul li a {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+/*Trivia*/
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: #1C3347;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #315C80;
+    margin: 20px 0 10px;
+}
+
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.pregunta {
+    margin-bottom: 25px;
+}
+
+.pregunta p {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #c9ddff;
+}
+
+.opciones label {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 12px 18px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: 0.25s ease;
+    color: #e8f1ff;
+    letter-spacing: 0.3px;
+}
+
+.opciones label:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+
+.opciones input[type="radio"] {
+    display: none;
+}
+
+.opciones input[type="radio"]:checked + label {
+    background: #315C80;
+    color: white;
+    border-color: #1C3347;
+}
+
+.boton-enviar {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background: #315C80;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.boton-enviar {
+    display: block;
+    width: 50%;
+    padding: 14px 0;
+    background: #21366e;
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    cursor:pointer;
+    margin-top: 25px;
+    margin: 25px auto 0;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(75,124,255,0.3);
+}
+
+.boton-enviar:hover {
+    background: #4e5979;
+    transform: translateY(-2px);
+}
+
