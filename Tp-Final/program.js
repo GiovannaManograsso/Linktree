@@ -1,4 +1,4 @@
-// CALCULAR DONACIÓN
+// --------------------- CALCULAR DONACIÓN ---------------------
 const montoBase = document.getElementById("montoBase");
 const tipoDonacion = document.getElementById("tipoDonacion");
 const totalDonar = document.getElementById("totalDonar");
@@ -6,7 +6,6 @@ const totalDonar = document.getElementById("totalDonar");
 function calcularTotal() {
     let base = parseFloat(montoBase.value) || 0;
     let multiplicador = parseFloat(tipoDonacion.value);
-
     let total = base * multiplicador;
     totalDonar.textContent = "$" + total.toFixed(2);
 }
@@ -14,57 +13,27 @@ function calcularTotal() {
 montoBase.addEventListener("input", calcularTotal);
 tipoDonacion.addEventListener("change", calcularTotal);
 
-// ENVÍO DE FORMULARIO DE DONACIÓN
-document.getElementById("btnEnviarDonacion").addEventListener("click", function() {
-    const base = montoBase.value;
-    const tipo = tipoDonacion.value;
-    const total = totalDonar.textContent.replace("$", ""); // quitar $
-
-    // Llenar formulario oculto
-    document.getElementById("mailMontoBase").value = base;
-    document.getElementById("mailTipoDonacion").value = tipo;
-    document.getElementById("mailTotal").value = total;
-
-    // Enviar por FormSubmit
-    document.getElementById("formEnviarMail").submit();
-});
-
-// ENVÍO DE FORMULARIO DE VOLUNTARIADO
-document.getElementById("btnEnviarVoluntario").addEventListener("click", function () {
-    document.getElementById("mailVolNombre").value = document.getElementById("volNombre").value;
-    document.getElementById("mailVolEmail").value = document.getElementById("volEmail").value;
-    document.getElementById("mailVolTelefono").value = document.getElementById("volTelefono").value;
-    document.getElementById("mailVolDisponibilidad").value = document.getElementById("volDisponibilidad").value;
-    document.getElementById("mailVolMotivo").value = document.getElementById("volMotivo").value;
-
-    document.getElementById("formVoluntarioMail").submit();
-});
-
-// DONACIÓN
+// --------------------- ENVÍO FORMULARIO DONACIÓN ---------------------
 document.getElementById("btnEnviarDonacion").addEventListener("click", function(event) {
     event.preventDefault();
 
-    const base = montoBase.value;
-    const tipo = tipoDonacion.value;
-    const total = totalDonar.textContent.replace("$", "");
+    // llenar formulario oculto
+    document.getElementById("mailMontoBase").value = montoBase.value;
+    document.getElementById("mailTipoDonacion").value = tipoDonacion.value;
+    document.getElementById("mailTotal").value = totalDonar.textContent.replace("$", "");
 
-    // Llenar formulario oculto
-    document.getElementById("mailMontoBase").value = base;
-    document.getElementById("mailTipoDonacion").value = tipo;
-    document.getElementById("mailTotal").value = total;
-
-    // Enviar el formulario
     const form = document.getElementById("formEnviarMail");
+
     fetch(form.action, {
         method: "POST",
-        body: new FormData(form),
+        body: new FormData(form)
     })
     .then(() => {
-        // Cerrar modal de donación
+        // cerrar modal de donación
         const modalEl = document.getElementById('donarModal');
         bootstrap.Modal.getInstance(modalEl).hide();
 
-        // Mostrar modal de confirmación
+        // mostrar modal de confirmación
         const confirmModal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
         confirmModal.show();
     })
@@ -74,10 +43,11 @@ document.getElementById("btnEnviarDonacion").addEventListener("click", function(
     });
 });
 
-// VOLUNTARIADO
+// --------------------- ENVÍO FORMULARIO VOLUNTARIADO ---------------------
 document.getElementById("btnEnviarVoluntario").addEventListener("click", function(event) {
     event.preventDefault();
 
+    // llenar formulario oculto
     document.getElementById("mailVolNombre").value = document.getElementById("volNombre").value;
     document.getElementById("mailVolEmail").value = document.getElementById("volEmail").value;
     document.getElementById("mailVolTelefono").value = document.getElementById("volTelefono").value;
@@ -85,14 +55,17 @@ document.getElementById("btnEnviarVoluntario").addEventListener("click", functio
     document.getElementById("mailVolMotivo").value = document.getElementById("volMotivo").value;
 
     const form = document.getElementById("formVoluntarioMail");
+
     fetch(form.action, {
         method: "POST",
-        body: new FormData(form),
+        body: new FormData(form)
     })
     .then(() => {
+        // cerrar modal de voluntariado
         const modalEl = document.getElementById('voluntarioModal');
         bootstrap.Modal.getInstance(modalEl).hide();
 
+        // mostrar modal de confirmación
         const confirmModal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
         confirmModal.show();
     })
@@ -102,13 +75,23 @@ document.getElementById("btnEnviarVoluntario").addEventListener("click", functio
     });
 });
 
-// Botón del modal de confirmación para volver al inicio
+// --------------------- BOTÓN VOLVER AL INICIO ---------------------
 document.getElementById("volverIndex").addEventListener("click", function() {
     window.location.href = "index.html";
 });
 
+// --------------------- BOTÓN HAMBURGUESA ---------------------
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-//boton de modos
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('show');
+    });
+});
+
+// --------------------- CAMBIO DE TEMA ---------------------
 function toggleTheme() {
     const container = document.getElementById("theme-container");
     const icon = document.getElementById("toggle-icon");
