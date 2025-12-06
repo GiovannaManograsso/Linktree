@@ -24,23 +24,7 @@ document.getElementById("btnEnviarDonacion").addEventListener("click", function(
 
     const form = document.getElementById("formEnviarMail");
 
-    fetch(form.action, {
-        method: "POST",
-        body: new FormData(form)
-    })
-    .then(() => {
-        // cerrar modal de donación
-        const modalEl = document.getElementById('donarModal');
-        bootstrap.Modal.getInstance(modalEl).hide();
-
-        // mostrar modal de confirmación
-        const confirmModal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
-        confirmModal.show();
-    })
-    .catch(err => {
-        alert("Error al enviar el formulario. Revisa la consola.");
-        console.error(err);
-    });
+    form.submit();
 });
 
 // --------------------- ENVÍO FORMULARIO VOLUNTARIADO ---------------------
@@ -95,6 +79,7 @@ function toggleTheme() {
         icon.src = "imagenes-index/sol.png";
     }
 }
+
 
 
 
