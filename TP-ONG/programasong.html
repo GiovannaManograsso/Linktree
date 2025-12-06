@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Conectando Generaciones es una iniciativa que promueve la inclusión y el bienestar de los adultos mayores mediante actividades intergeneracionales. A través de voluntariado, talleres y eventos solidarios, buscamos reducir la soledad, fortalecer vínculos y construir comunidades más unidas. Además, contamos con un programa de sponsors que apoya nuestras acciones y reconoce el compromiso de los voluntarios.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Giovanna Manograsso y Melina Bovarines">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Programas </title>
+    <link rel="icon" href="imagenes-index/favicon-convertido-a-256x256.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylespag.css">
+</head>
+<body>
+    <div id="theme-container" class="light">
+        <nav>
+            <div class="nav-container">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li class="logo-centro">
+                        <a class="logo" href="index.html">
+                            <img src="imagenes-index/logo1.png" width="50px">
+                            Conectando generaciones
+                        </a>
+                    </li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="programasong.html">Programas</a></li>
+                    <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">
+                        <img id="toggle-icon" src="imagenes/sol.png" alt="icono">
+                    </button>
+                </ul>
+            </div>
+        </nav>
+        <!-- TÍTULO PRINCIPAL -->
+        <header class="header-proyectos">
+            <h1 class="titulo-programa">Nuestros Programas y Proyectos</h1>
+            <p>Conocé el trabajo que realizamos día a día para acompañar, asistir y transformar vidas.</p>
+        </header>
+
+        <!-- FILTROS -->
+        <section class="filtros">
+            <button class="filtro active" data-cat="todos">Todos</button>
+            <button class="filtro" data-cat="acompanamiento">Acompañamiento</button>
+            <button class="filtro" data-cat="voluntariado">Voluntariado</button>
+            <button class="filtro" data-cat="donantes">Donaciones</button>
+        </section>
+
+        <!-- LISTA DE PROYECTOS -->
+        <section class="lista-proyectos">
+            <div class="proyecto-card" data-cat="voluntariado">
+                <picture>
+                    <source srcset="imagenes/voluntariosprogr-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/voluntariosprogr-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/voluntariosprogr-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg"> 
+                  <img src="imagenes/voluntariosprogr-pag-1600.jpg" alt="Voluntariado Vivo">  
+                </picture>
+                <div class="info">
+                    <h2>Voluntariado Vivo</h2>
+                    <p>Programa de inscripción abierta dirigido a todas las personas interesadas en participar como
+                        voluntarias, ya sea por vocación, para adquirir experiencia o para fortalecer su CV. El programa
+                        incluye acompañamiento a adultos mayores, actividades recreativas, juegos, charlas y espacios de
+                        integración que promueven el bienestar y la inclusión social.
+                    </p>
+                    <!-- Botón que abre el modal -->
+                    <button type="button" class="btn aplicar-voluntario" data-bs-toggle="modal" data-bs-target="#voluntarioModal">
+                        Aplicar
+                    </button>
+                    <button class="btn aplicar-voluntario"><a href="voluntariado.html">Leer más</a></button>
+                </div>
+            </div>
+            <div class="proyecto-card" data-cat="donantes">
+                <picture>
+                    <source srcset="imagenes/ferias-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/ferias-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/ferias-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/ferias-pag-1600.jpg" alt="Eventos Solidarios Conectados">
+                </picture>
+                <div class="info">
+                    <h2>Eventos Solidarios Conectados</h2>
+                    <p>Ferias, festivales, caminatas y diversas actividades comunitarias que convocan a niños, jóvenes y
+                        adultos mayores. Estos eventos se realizan con el objetivo de recaudar fondos y fomentar
+                        experiencias compartidas que fortalecen el sentido de comunidad y participación social.
+                    </p>
+                    <button type="button" class="btn aplicar-voluntario" data-bs-toggle="modal" data-bs-target="#voluntarioModal">
+                        Aplicar
+                    </button>
+                    <button class="btn aplicar-voluntario"><a href="eventos.html">Leer mas </a></button>
+                </div>
+            </div>
+
+            <div class="proyecto-card" data-cat="acompanamiento">
+                <picture>
+                    <source srcset="imagenes/señoraleer-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/señoraleer-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/señoraleer-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/señoraleer-pag-1600.jpg" alt="Comunidad en accion">
+                </picture>
+                <div class="info">
+                    <h2>Comunidad en Accion</h2>
+                    <p>Talleres creativos intergeneracionales diseñados para enriquecer el día a día de los adultos
+                        mayores,
+                        promoviendo su bienestar emocional, cognitivo y social. Estas actividades reúnen a distintas
+                        generaciones en espacios de aprendizaje, expresión artística y colaboración, fortaleciendo los
+                        vínculos comunitarios y creando momentos significativos para todos los participantes.
+                    </p>
+                    <button type="button" class="btn aplicar-voluntario" data-bs-toggle="modal" data-bs-target="#voluntarioModal">
+                        Aplicar
+                    </button>
+                    <button class="btn aplicar-voluntario"><a href="comunidad.html">Leer mas </a></button>
+                </div>
+            </div>
+            <!-- MODAL VOLUNTARIADO -->
+            <div class="modal fade" id="voluntarioModal" tabindex="-1" aria-labelledby="voluntarioModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="voluntarioModalLabel">Voluntario</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formVoluntariado">
+                                <label class="form-label">Nombre completo:</label>
+                                <input type="text" class="form-control" id="volNombre" required>
+                                <label class="form-label mt-3">Email:</label>
+                                <input type="email" class="form-control" id="volEmail" required>
+                                <label class="form-label mt-3">Teléfono:</label>
+                                <input type="tel" class="form-control" id="volTelefono" >
+                                <label class="form-label mt-3">Disponibilidad:</label>
+                                <select class="form-select" id="volDisponibilidad" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="Fines de semana">Fines de semana</option>
+                                    <option value="Días de semana por la tarde">Días de semana por la tarde</option>
+                                    <option value="Días de semana por la mañana">Días de semana por la mañana</option>
+                                    <option value="Flexible">Flexible</option>
+                                </select>
+                                <label class="form-label mt-3">¿Por qué querés ser voluntario/a?</label>
+                                <textarea class="form-control" id="volMotivo" rows="3" required></textarea>
+                                <img src="imagenes-index/voluntario.jpg" alt="">
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <!-- Este botón envía el formulario -->
+                            <form id="formVoluntarioEmailJS">
+                                <button type="button" id="btnEnviarVoluntario" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- GALERÍA -->
+        <section class="galeria">
+            <h2>Nuestros Momentos</h2>
+            <div class="grid-galeria">
+                <picture>
+                    <source srcset="imagenes/mision-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/mision-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/mision-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/mision-pag-1600.jpg" alt="Visión - ONG" />
+                </picture>
+                <picture>
+                    <source srcset="imagenes/anciarbol-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/anciarbol-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/anciarbol-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/anciarbol-pag-1600.jpg" alt="">
+                </picture>
+                <picture>
+                    <source srcset="imagenes/abuebici-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/abuebici-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/abuebici-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+
+                    <img src="imagenes/abuebici-pag-1600.jpg" alt="">
+                </picture>
+                
+                <picture>
+                    <source srcset="imagenes/señoraleer-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/señoraleer-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/señoraleer-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/señoraleer-pag-1600.jpg" alt="Comunidad en accion">
+                </picture>
+                <picture>
+                    <source srcset="imagenes/abuelopinta-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/abuelopinta-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/abuelopinta-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/abuelopinta-pag-1600.jpg" alt="">
+                </picture>
+                <picture>
+                    <source srcset="imagenes/niños-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/niños-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/niños-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/niños-pag-1600.jpg" alt="">
+                </picture>
+            </div>
+        </section>
+        <footer>
+            <div class="columna">
+                <h3 class="nombre">© 2025 - Giovanna Manograsso y <br>Melina Bovarines</h3>
+            </div>
+            <div class="columna">
+                <h3 class="nombre">Mapa del sitio</h3>
+                <ul>
+                    <li><a class="boton" href="index.html">Inicio</a></li>
+                    <li><a class="boton" href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a class="boton" href="programasong.html">Programas</a></li>
+                    <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
+                    <li><a class="boton" href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="columna">
+                <h3 class="nombre">Redes sociales</h3>
+                <ul>
+                    <li><a class="boton" href="https://www.tiktok.com/">TikTok</a></li>
+                    <li><a class="boton" href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a class="boton" href="../linktree/index.html">Linktree</a></li>
+                </ul>
+            </div>
+            <div class="volver-arriba-footer">
+                <a href="programasong.html" class="volver-arriba">Volver arriba</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Seleccionamos el botón hamburguesa y el menú
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            // Alternamos la clase 'show' para mostrar/ocultar el menú
+            navLinks.classList.toggle('show');
+
+            // Alternamos la animación de la hamburguesa
+            hamburger.classList.toggle('active');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        emailjs.init("jgWV5R2W37vTifhI_");
+        // ---------- VOLUNTARIADO ----------
+        document.getElementById("btnEnviarVoluntario").addEventListener("click", function () {
+
+            const nombre = document.getElementById("volNombre").value;
+            const email = document.getElementById("volEmail").value;
+            const telefono = document.getElementById("volTelefono").value;
+            const disponibilidad = document.getElementById("volDisponibilidad").value;
+            const motivo = document.getElementById("volMotivo").value;
+
+            if (!nombre || !email || !disponibilidad || !motivo) {
+                Swal.fire("Campos incompletos", "Por favor completá todo.", "warning");
+                return;
+            }
+
+            emailjs.send("service_ru3yzzu", "template_6yxg7yh", {
+                nombre, email, telefono, disponibilidad, motivo
+            })
+            .then(() => {
+
+                // CERRAR MODAL
+                const modal = bootstrap.Modal.getInstance(document.getElementById("voluntarioModal"));
+                modal.hide();
+
+                // LIMPIAR CAMPOS
+                document.getElementById("formVoluntariado").reset();
+
+                // ALERTA
+                Swal.fire({
+                    title: "¡Formulario enviado!",
+                    text: "Tu postulación de voluntariado fue registrada 💙",
+                    icon: "success",
+                    confirmButtonText: "Cerrar"
+                });
+            })
+            .catch((error) => {
+                console.error(error);
+                Swal.fire("Error", "No se pudo enviar el formulario ❌", "error");
+            });
+
+        });
+    </script>
+    <script src="paginas.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
