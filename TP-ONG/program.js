@@ -63,8 +63,7 @@ document.getElementById("btnEnviarVoluntario").addEventListener("click", functio
     .then(() => {
         // cerrar modal de voluntariado
         const modalEl = document.getElementById('voluntarioModal');
-        const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-        modal.hide();
+        bootstrap.Modal.getInstance(modalEl).hide();
 
         // mostrar modal de confirmación
         const confirmModal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
