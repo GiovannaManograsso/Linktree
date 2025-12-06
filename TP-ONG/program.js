@@ -63,7 +63,8 @@ document.getElementById("btnEnviarVoluntario").addEventListener("click", functio
     .then(() => {
         // cerrar modal de voluntariado
         const modalEl = document.getElementById('voluntarioModal');
-        bootstrap.Modal.getInstance(modalEl).hide();
+        const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modal.hide();
 
         // mostrar modal de confirmación
         const confirmModal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
@@ -95,6 +96,7 @@ function toggleTheme() {
         icon.src = "imagenes-index/sol.png";
     }
 }
+
 
 
 
